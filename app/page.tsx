@@ -15,7 +15,7 @@ export default function Home() {
       <div className='absolute -z-10 w-full h-full '>
         <Image
           src={background} alt='background image'
-          className='w-full h-full brightness-[.8]' width={1000} height={1000}/>
+          className='brightness-[.8] w-full h-full' width={1000} height={1000}/>
       </div>
       <div className='max-w-screen-lg ml-20 mt-20 flex flex-col gap-20'>
       <Headings/>
