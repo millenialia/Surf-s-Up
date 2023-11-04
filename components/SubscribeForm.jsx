@@ -8,6 +8,7 @@ export default function SubscribeForm() {
 
   const [email, setEmail] = useState('')
   const [agree, setAgree] = useState(false)
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
@@ -24,10 +25,20 @@ export default function SubscribeForm() {
       return
     }
 
-    postEmailRequest(email)
 
-    setAgree(false)
-    setEmail('')
+    setLoading(true);
+
+    try {
+      await postEmailRequest(email);
+      
+      setAgree(false);
+      setEmail('');
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false); 
+    }
+  
   }
 
 
@@ -46,18 +57,22 @@ export default function SubscribeForm() {
       />
       </label>
 
-      <label className='text-[10px]'>
+      <label className='text-[10px] cursor-pointer'>
       <input type="checkbox" 
       id="agree"
-      defaultChecked={false}
       className='appearance-none mr-1 w-2 h-2 border-[1px] border-white checked:bg-white'
-      onChange={(e)=> setAgree(true)}
-      value={agree} 
+      onChange={(e)=> setAgree(!agree)}
+      checked={agree} 
       />
       I agree to receive updates and offers for surf camp trips via email.
       </label>
 
-      <button type='submit' className='text-left text-xl'>Catch the Wave</button>
+    
+
+      <button type='submit' className='text-xl w-[200px] h-12 border-[1px] p-2 text-center hover:bg-black/20 hover:text-[20.5px] transition-all'>
+      {loading ? (<div className=' m-auto h-5 w-5 animate-spin rounded-full border-b-2 border-white'></div>) :
+        ("Catch the Wave")}
+        </button>
     </form>
   )
 }

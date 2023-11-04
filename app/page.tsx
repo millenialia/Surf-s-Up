@@ -17,7 +17,7 @@ export default function Home() {
           src={background} alt='background image'
           className='brightness-[.8] w-full h-full' width={1000} height={1000}/>
       </div>
-      <div className='max-w-screen-lg ml-20 mt-20 flex flex-col gap-20'>
+      <div className='max-w-screen-lg ml-20 mt-20 flex flex-col'>
       <Headings/>
       <SubscribeForm/>
       </div>
