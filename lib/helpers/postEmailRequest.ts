@@ -1,8 +1,11 @@
 import { toast } from 'react-hot-toast'
 
-export const postEmailRequest = async(email) =>{
+export const postEmailRequest = async(email:string) =>{
     try {
-        const response = await fetch('https://surfs-up.vercel.app/api/subscriber',{
+        const response = await fetch(
+          'https://surfs-up.vercel.app/api/subscriber'
+          // 'http://localhost:3000/api/subscriber'
+          ,{
           method: "POST",
           headers: {
             "Content-type": "application/json"

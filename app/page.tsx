@@ -4,14 +4,14 @@ import { Montserrat } from 'next/font/google'
 import Headings from '@/components/Headings'
 import SubscribeForm from '@/components/SubscribeForm'
 
-const readex = Montserrat({
+const montserrat = Montserrat({
   subsets:['latin'],
   weight: '300',
 })
 
 export default function Home() {
   return (
-    <main className={`${readex.className} flex flex-col`}>
+    <main className={`${montserrat.className} flex flex-col`}>
       <div className='absolute -z-10 w-full h-full '>
         <Image
           src={background} alt='background image'
