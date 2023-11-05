@@ -21,10 +21,10 @@ export default function SubscribeForm() {
 
 
   return (
-    <form className='flex flex-col gap-5 justify-start w-1/2' 
+    <form className='flex flex-col gap-5 justify-start max-w-[80%] sm:w-1/2' 
     onSubmit={handleSubmit(onSubmit)}
     >
-      <h3 className='text-xl'>Get Updates on Upcoming Surf Camps</h3>
+      <h3 className='text-base md:text-xl'>Get Updates on Upcoming Surf Camps</h3>
       <label className='flex flex-col gap-2 text-left'>
 
       <input 
@@ -65,7 +65,7 @@ export default function SubscribeForm() {
 
       <button type='submit' 
       disabled={isSubmitting} 
-      className='text-xl w-[200px] h-12 border-[1px] p-2 text-center hover:bg-black/20 hover:text-[20.5px] transition-all disabled:hover:bg-transparent'>
+      className='text-base md:text-xl w-[200px] h-12 border-[1px] p-2 text-center hover:bg-black/20 hover:text-[20.5px] transition-all disabled:hover:bg-transparent'>
       {isSubmitting ? (<div className=' m-auto h-5 w-5 animate-spin rounded-full border-b-2 border-white'></div>) :
         ('Catch the Wave')}
         </button>

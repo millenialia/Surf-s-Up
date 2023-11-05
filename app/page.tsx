@@ -13,11 +13,16 @@ export default function Home() {
   return (
     <main className={`${montserrat.className} flex flex-col`}>
       <div className='absolute -z-10 w-full h-full '>
-        <Image
-          src={background} alt='background image'
-          className='brightness-[.8] w-full h-full' width={1000} height={1000}/>
+          <Image
+            src={background}
+            alt='background image'
+            layout="fill"
+            objectFit="cover"
+            objectPosition="right center"
+            className='brightness-[.4] md:brightness-[.8]'
+          />
       </div>
-      <div className='max-w-screen-lg ml-20 mt-20 flex flex-col'>
+      <div className='max-w-screen-lg ml-10 mt-10 sm:ml-20 sm:mt-20 flex flex-col'>
       <Headings/>
       <SubscribeForm/>
       </div>
