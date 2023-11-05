@@ -5,6 +5,9 @@ import {transporter, mailOptions} from "@/lib/sendEmail/nodemailer"
 
 export async function POST(request) {
     const {email} = await request.json()
+    if (!email) {
+        return NextResponse.json({message: "Set email to subscribe."}, { status:500})
+    }
     await connectMongoDb()
     const subscriber = await Subscriber.findOne({email})
     
