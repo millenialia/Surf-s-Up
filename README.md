@@ -13,7 +13,7 @@ This project was created using Next.js, a full-stack framework, along with TypeS
 
 ## Testing the Landing Page
 
-You can test the landing page by clicking on the following link: [//link](https://surfs-up.vercel.app/)
+You can test the landing page by clicking on the following [link](https://surfs-up.vercel.app/)
 
 ## Getting Started
 
