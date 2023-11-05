@@ -22,7 +22,7 @@ To run this project locally, follow these steps:
 1. Clone the repository to your local machine.
 2. Update in file postEmailRequest.ts url for fetching as showed on the image below:
 ![Alt Text](./public/localUsage.png)
-3. update .env file with the necessary dependencies as described in env.example
+3. update .env file with the necessary variables as described in env.example
 
 4. Install the necessary dependencies using the following command:
 
